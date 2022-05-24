@@ -1,1 +1,5 @@
-﻿  OpenCV_Test.vcxproj -> C:\Users\lc472\Documents\cpp_project\OpenCV_Test\x64\Debug\OpenCV_Test.exe
+﻿  main.cpp
+C:\Users\lc472\Documents\cpp_project\OpenCV_Test\main.cpp(47,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\lc472\Documents\cpp_project\OpenCV_Test\main.cpp(54,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\lc472\Documents\cpp_project\OpenCV_Test\main.cpp(100,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  OpenCV_Test.vcxproj -> C:\Users\lc472\Documents\cpp_project\OpenCV_Test\x64\Debug\OpenCV_Test.exe

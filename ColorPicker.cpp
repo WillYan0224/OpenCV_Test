@@ -12,7 +12,7 @@ Mat imgHSV, mask, imgColor;
 int hmin = 0, smin = 110, vmin = 153;
 int hmax = 19, smax = 240, vmax = 255;
 
-VideoCapture cap(0);
+VideoCapture cap(2);
 Mat img;
 
 void main() {

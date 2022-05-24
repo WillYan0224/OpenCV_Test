@@ -10,15 +10,23 @@ using namespace std;
 /////////////////  Project 1 - Virtual Painter //////////////////////
 
 Mat img;
-VideoCapture cap(0);
+VideoCapture cap(2);
 vector<vector<int>> newPoints;  // to store all points
 
 /////////////////////  COLOR VALUES ////////////////////////////////
 						   // hmin, smin, vmin hmax, smax, vmax
-vector<vector<int>> myColors{ {124,48,117,143,170,255}, // Purple
-								{68,72,156,102,126,255} };// Green
-vector<Scalar> myColorValues{ {255,0,255},		// Purple
-								{0,255,0} };// Green 	
+vector<vector<int>> myColors{ {18,116,153,97,232,203}, // yellow
+								{56,116,75,89,147,158}, // Green
+									{70,175,51,144,232,255}, // Blue
+										{0,97,94,12,255,255} // Red
+};
+							
+
+vector<Scalar> myColorValues{ {0,255,255},// Yellow
+								{0,255,0}, // Green 	
+									{255,0,0}, // Blue
+										 {0,0,255} // Red
+};
 ////////////////////////////////////////////////////////////////////
 
 Point getContours(Mat image) {
@@ -51,8 +59,8 @@ Point getContours(Mat image) {
 			myPoint.x = boundRect[i].x + boundRect[i].width / 2;
 			myPoint.y = boundRect[i].y;
 
-			//drawContours(img, conPoly, i, Scalar(255, 0, 255), 2);
-			//rectangle(img, boundRect[i].tl(), boundRect[i].br(), Scalar(0, 255, 0), 5);
+			drawContours(img, conPoly, i, Scalar(255, 0, 255), 2);
+			rectangle(img, boundRect[i].tl(), boundRect[i].br(), Scalar(0, 255, 0), 5);
 		}
 	}
 	return myPoint;
